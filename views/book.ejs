@@ -1,0 +1,32 @@
+
+
+<!DOCTYPE html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<!--
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> 
+-->
+	<body>
+		<div class="login-page">
+	  <div class="form">
+		<form method="POST" action="/ticket" class="login-form">
+			Username :
+			<input type="text" name="user" value="<%= data.user %>">
+			Cost : <input type="text" name="1" value="<%= data.cost %>">
+			<input type="text" name="cc" placeholder="Enter Credit Card" value="">
+			<input type="text" name="cvv" placeholder ="Enter CVV" value="">
+			<input type="text" name="date" placeholder ="Enter Validity" value="">
+			<input type="submit" name="25" value="Submit">
+		</form>		
+		</div></div>
+	</body>
+
+</html>

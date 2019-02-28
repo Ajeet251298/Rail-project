@@ -1,0 +1,45 @@
+
+
+<!DOCTYPE html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script> 
+
+	<body>
+		Welcome <%= data.name %><br><br><br>
+		<div class="login-page">
+	  <div class="form">
+		<p> Book ticket </p> 
+		
+		
+		<form class="login-form" name="login" method="POST" action="/book">
+			<input type="text" value="<%= data.name %>" name="user">
+			<select name="sec">
+							<option value="Select Source" >Select Source</option>
+							<% data.obj.sc.forEach(function(item){ %>
+								<option value="<%= item.szc %>" ><%= item.szc %></option>
+							 <% }) %>
+						</select><br><br>
+			 <select name="dec">
+			 	<option value="Select Destination">Select Destnation</option>
+							<% data.obj.sc.forEach(function(item){ %>
+								<option value="<%= item.szc %>" ><%= item.szc %></option>
+							 <% }) %>
+						</select><br><br>
+			Time : <input type="text" value="0:00" name="time"> 
+			<input type="submit" name="name3" value="Book"><br>
+
+		</form></div></div>
+
+	</body>
+
+</html>
